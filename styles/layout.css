@@ -5,6 +5,11 @@
   font-family: Verdana;
 }
 
+@font-face {
+  font-family: headerfont;
+  src: url(/fonts/Lobster_1.3.otf);
+}
+
 header {
   font-weight: bold;
 }
@@ -17,6 +22,16 @@ header {
 .headerlogo>img {
   height: 60px;
   width: 60px;
+}
+
+#headername {
+  font-family: headerfont;
+  font-size: 40px;
+  color: #603813;
+  padding: 15px;
+  margin: 8px 0;
+  font-weight: bold;
+  text-shadow: 5px 5px 5px #5f2c17;
 }
 
 #mainHeader {
@@ -53,7 +68,24 @@ nav ul li {
 .navlink.active {}
 
 .backgroundgradient {
-  background-color: #603813;
+  background: linear-gradient(to right, #603813, #341c05);
+}
+
+.addtocartbutton {
+  cursor: pointer;
+  padding: 4px 25px;
+  background: #603813;
+  border: 1px solid #381f09;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .75);
+  color: #f3f3f3;
+  font-size: 0.8em;
+  width: 80px;
+}
+
+.addtocartbutton:hover, .addtocartbutton:focus {
+  background-color: #512c0a;
+  box-shadow: 0 0 1px rgba(0, 0, 0, .75);
 }
 
 .searchbox {
@@ -87,6 +119,11 @@ nav ul li {
   font-size: 12px;
   margin-top: 20px;
   margin-bottom: 20px;
+  /* column-count: 2; */
+  column-width: 200px;
+  column-gap: 40px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 #welcometext>header {
