@@ -5,15 +5,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Coffees</title>
+  <link rel="stylesheet" href="styles/layout.css">
+  <script src="scripts/dragAndDrop.js"></script>
 </head>
 <body>
-  <header>
-      <div>
-          <a class="headerlogo" href="index.html">
-              <img src="images/logo.png" />
-          </a>
-          <span id="headername">Joe's Coffee Store</span>
-      </div>
+  <header id="mainHeader">
+    <div>
+      <a class="headerlogo" href="index.html">
+        <img src="images/logo.png" />
+      </a>
+      <span id="headername">Joe's Coffee Store</span>
+      <input type="search" class="searchbox" placeholder="Search our store" />
+    </div>
+    <nav class="backgroundgradient">
+      <ul>
+        <li><a href="index.html" class="navlink">Home</a></li>
+        <li><a href="blog.html" class="navlink">Blog</a></li>
+        <li><a href="allcoffees.html" class="navlink">Our coffees</a></li>
+        <li><a href="accessories.html" class="navlink">Accessories</a></li>
+        <li><a href="gifts.html" class="navlink">Gifts</a></li>
+        <li><a href="findus.html" class="navlink">Find us</a></li>
+        <li><a href="checkout.html" class="navlink">Checkout</a></li>
+      </ul>
+    </nav>
   </header>
 
   <div id="welcomeimage">
@@ -72,9 +86,13 @@
           </div>
       </article>
   </section>
+  
   <div id="shoppingcart">
       <header class="blockheader"><span>Shopping cart</span></header>
       <ul></ul>
   </div>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', addDnDHandlers);
+</script>
 </html>
