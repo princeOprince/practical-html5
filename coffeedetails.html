@@ -8,6 +8,7 @@
   <title>Coffee Details</title>
   <link rel="stylesheet" href="styles/layout.css">
   <script src="/scripts/videoplayer.js"></script>
+  <script src="/scripts/canvasChart.js"></script>
 </head>
 
 <body>
@@ -87,14 +88,15 @@
       </div>
     </div>
 
-    <!-- <div id="salesCanvasGraph">
+    <div id="salesCanvasGraph">
       <canvas id="barChart" height="800" width="750"></canvas>
-    </div> -->
+    </div>
 
   </section>
 </body>
 <script>
   document.addEventListener('DOMContentLoaded', initialiseVideoPlayerControls)
+  document.addEventListener('DOMContentLoaded', drawChart)
 </script>
 
 </html>
