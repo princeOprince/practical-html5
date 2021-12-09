@@ -6,17 +6,38 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coffee Details</title>
+  <link rel="stylesheet" href="styles/layout.css">
+  <script src="/scripts/videoplayer.js"></script>
 </head>
 
 <body>
-  <header>
+  <header id="mainHeader">
     <div>
       <a class="headerlogo" href="index.html">
         <img src="images/logo.png" />
       </a>
       <span id="headername">Joe's Coffee Store</span>
+      <input type="search" class="searchbox" placeholder="Search our store" />
     </div>
+    <nav class="backgroundgradient">
+      <ul>
+        <li><a href="index.html" class="navlink">Home</a></li>
+        <li><a href="blog.html" class="navlink">Blog</a></li>
+        <li><a href="allcoffees.html" class="navlink">Our coffees</a></li>
+        <li><a href="accessories.html" class="navlink">Accessories</a></li>
+        <li><a href="gifts.html" class="navlink">Gifts</a></li>
+        <li><a href="findus.html" class="navlink">Find us</a></li>
+        <li><a href="checkout.html" class="navlink">Checkout</a></li>
+      </ul>
+    </nav>
   </header>
+
+  <div id="welcomeimage">
+    <img src="images/coffeeheader.jpg" />
+  </div>
+  <div id="coffeeofthemonth">
+    <img src="images/cotm.jpg" />
+  </div>
 
   <section class="coffeedetails">
     <header class="blockheader">
@@ -48,7 +69,32 @@
       <p class="productarticleprice">€10</p>
     </div>
 
+    <div>
+      <video width="320" height="249" class="coffeevideoplayer" id="videoplayer" poster="/images/logo.png" autoplay muted>
+        <source src="/video/movie.mp4" type="video/mp4">
+        <source src="/video/movie.ogg" type="video/ogg">
+      </video>
+
+      <div id="controls">
+        <div id="erroDiv" style="color: red;"></div>
+        <button id="slowerButton">Slower</button>
+        <button id="backButton">Rewind</button>
+        <button id="playButton">Pause</button>
+        <button id="forwardButton">Forward</button>
+        <button id="fasterButton">Faster</button>
+        <button id="muteButton">Unmute</button>
+        <br>
+      </div>
+    </div>
+
+    <!-- <div id="salesCanvasGraph">
+      <canvas id="barChart" height="800" width="750"></canvas>
+    </div> -->
+
   </section>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', initialiseVideoPlayerControls)
+</script>
 
 </html>
